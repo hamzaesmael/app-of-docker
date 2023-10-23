@@ -9,16 +9,7 @@ services:
     env_file:
       - ./.env
     depends_on:
-      - postgres
       - redis
-  postgres:
-    image: postgres
-    restart: always
-    volumes:
-      - postgres-db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USERNAME: root
-      POSTGRES_PASSWORD: example
   redis:
     image: redis
   nginx:
@@ -30,7 +21,6 @@ services:
     depends_on:
       - node-app
     
-volumes:
-  postgres-db:
+
     
 
