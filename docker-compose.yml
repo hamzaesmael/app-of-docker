@@ -2,6 +2,7 @@ version: "3"
 services:
   node-app:
     container_name: newapp
+    image: hamzaesmael/new-app-of-docker
     build: .
     ports:
       - "4000:4000"
